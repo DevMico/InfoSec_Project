@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admininventory.css">
+    <title>Abesamis Dental Clinic</title>
+</head>
+<body> 
+    <!-- main div -->   
+    <div class="wrapper">
+        
+        
+        <!-- this the left panel located-->
+        <div class="left_panel">
+            <img class="logo" src="icons/patient/logo.png" alt="Logo">
+            <div>
+                <label class="label_home"           for="radio_home">           <img src="icons/admin/dashboard_icon.png" alt="Home Icon" >Dashboard</label>
+                <label class="label_notification"   for="radio_notification">   <img src="icons/patient/calendar_icon.png" alt="Notification Icon">Appointments</label>
+                <label class="label_medical"        for="radio_medical">        <img src="icons/admin/Patient_icon.png" alt="Medical Record Icon">Patients</label>
+                <label class="label_calendar"       for="radio_calendar">       <img src="icons/admin/Personal_icon.png" alt="Calendar Icon">Personnel Directory</label>
+                <label class="label_chat"           for="radio_chat">           <img src="icons/admin/Report_icon.png" alt="Message Icon">Reports and Analytics</label>
+                <label class="label_chat"           for="radio_chat">           <img src="icons/admin/Billing_icon.png" alt="Message Icon">Billing</label>
+                <label class="label_chat"           for="radio_chat">           <img src="icons/admin/Inventory_icon.png" alt="Message Icon">Inventory</label>
+                <label>                                                         <img src="icons/patient/signout_icon.png" alt="Logout Icon">Sign Out</label>
+            </div>
+        </div>
+
+        <!-- this div where the rigth panel located and the other feature-->
+        <div class="right_panel">
+
+            <!--this for header where the profile icon located----->
+            <div class="header">
+                <div class="info" style="text-align: left;">
+                    <p class="fullname">Leclerc, Charles</p>
+                    <p class="status">System Administrator</p>
+                </div>
+                <img class="profile_icon" src="img/CarlosID.png" alt="Profile Icon">
+            </div>
+
+                <!-- Create Account Section -->
+            <div class="form-container">
+                <h3>Personnel Directory</h3>
+            </div>
+            
+            <!-- Search Bar Section -->
+            <div class="search-bar-container">
+                <div class="search-bar-wrapper">
+                    <img src="icons/admin/Magnifying_Glass.png" alt="Search Icon" class="search-icon">
+                    <input type="text" class="search-bar" placeholder="Search personnel">
+                </div>
+                <button class="search-button">Search</button>
+                <button class="filter-button">
+                    <img src="icons/admin/Filter_Icon.png" alt="Filter Icon" class="filter-icon">Filter
+                </button>
+            </div>
+            
+            
+            <div class="supplier-table-container">
+                <table class="supplier-table">
+                    <thead>
+                        <tr>
+                            <th>Supplier ID</th>
+                            <th>Supplier Name</th>
+                            <th>Status</th>
+                            <th>Contact Person</th>
+                            <th>Contact Number</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Postal Code</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SUP001</td>
+                            <td>MedSupply Co.</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Janet K. Santos</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP002</td>
+                            <td>Health Essentials</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Carla G. Villanueva</td>
+                            <td>0917-555-6789</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP003</td>
+                            <td>DentalMed Inc.</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Martin H. Reyes</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP004</td>
+                            <td>OrthoDent Supplies</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Anna V. Mendoza</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP005</td>
+                            <td>Dental Essentials</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Leo P. Garcia</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP006</td>
+                            <td>Dental Products Ltd.</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Mia E. Fernandez</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP007</td>
+                            <td>EquipDent Corp.</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Paul B. Santos</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP008</td>
+                            <td>Tool Supplies Ltd.</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Lisa S. Gonzales</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP009</td>
+                            <td>Safe Radiology Ltd.</td>
+                            <td><span class="status inactive">Inactive</span></td>
+                            <td>Teresa De Vera</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP010</td>
+                            <td>CleanMed Solutions</td>
+                            <td><span class="status inactive">Inactive</span></td>
+                            <td>Jose Aquino</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP011</td>
+                            <td>RadiDent</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Ciara L. Ocampo</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP012</td>
+                            <td>MedEquip Plus</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>Marco J. Villena</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in consumables</td>
+                        </tr>
+                        <!-- Repeat rows for each supplier -->
+                    </tbody>
+                </table>
+            </div>
+            
+            
+        </div>
+
+    </div>   
+</body>
+</html>
+
+

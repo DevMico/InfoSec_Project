@@ -1,0 +1,354 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Choose your desired background color */
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    color: black;
+}
+
+/* Left Panel */
+.left_panel {
+    width: 17%; /* Default width */
+    background-color: #335271; /* Dark blue */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: width 0.3s ease; /* Smooth resizing */
+}
+
+/* Logo */
+.logo {
+    width: 150px    ;
+    margin-bottom: 30px;
+    
+}
+
+/* Navigation */
+.left_panel div {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.left_panel label {
+    width: 100%;
+    height: 50px; /*Spacing between the buttons*/
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background-color: #335271;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: background-color 0.2s ease;
+    color: #ffffff;
+}
+
+.left_panel label:hover {
+    background-color: #88baff; /* Hover effect */
+}
+
+.left_panel label img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.left_panel label:last-of-type {
+    margin-top: 60%;  /* signout */
+}
+
+/* Right Panel */
+.right_panel {
+    flex-grow: 1;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    height: 60px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    background-color: #ffffff; /* Ensure the bar has a visible background */
+    padding: 10px; /* Adjust padding for better appearance */
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    /*border-radius: 8px;  Optional: Add rounded corners */
+}
+
+.fullname {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #CD6A30;
+}
+
+.status {
+    font-size: 10px;
+    margin: 0;
+    color: #666;
+    text-align: right;
+}
+
+.profile_icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ddd;
+    object-fit: cover;
+}
+
+/* Profile Container */
+.container {
+    width: 100%; /* Width of the whole container */
+    height: 100%;
+    border: 2px solid #E7F1FF; /* Border color */
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    gap: 15px;
+    /* border-radius: 10px; Rounded corners */
+    /* background-color: #ffffff; Background color */
+    /* background-color:rgba(255, 0, 0, 0.2); */
+    overflow: hidden; /* Prevent content from overflowing */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Add shadow for effect */
+    /* margin: 20px auto; Center container */
+}
+
+.profile-container{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* background-color: #88baff;  */
+}
+
+.profile-picture-container {
+    width: 125px;
+    height: 125px;
+    border: 2px solid #335271;
+    /* background-color: #2e3948; */
+}
+
+.picture{
+    width: 100%;
+    height: 100%;
+}
+
+.profile-details-container{
+    width: 50%;
+    height: 80%;
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    gap: 15px; /* Adds spacing between children */
+    margin: 10px;
+    /* background-color: #666; */
+}
+
+.profile-name-container{
+    height: 35px;
+    width: 310px;
+    /* background-color: #CD6A30; */
+}
+
+.profile-name{
+    font-size: 36px;
+    font-weight: bold;
+    color: #335271;   
+}
+
+.sab{
+    display: flex; /* Enables Flexbox */
+    flex-direction: row; /* Stacks children vertically */
+    gap: 10px;
+}
+
+.profile-sex-container{
+    height: 30px;
+    width: 150px;
+    display: flex; /* Enables Flexbox */
+    flex-direction: row; /* Stacks children vertically */
+    /* background-color: #ffffff; */
+}
+
+.sex-icon{
+    height: 30px;
+    width: 30px;
+}
+
+.sex-text{
+    font-size: 12px;
+}
+
+.profile-age-container{
+    height: 30px;
+    width: 150px;
+    display: flex; /* Enables Flexbox */
+    flex-direction: row; /* Stacks children vertically */
+    gap: 5px;
+    /* background-color: #ffffff; */
+}
+
+.hourglass-icon{
+    height: 100%;
+    width: 20px;
+}
+
+.profile-birthday-container{
+    height: 30px;
+    width: 200px;
+    display: flex; /* Enables Flexbox */
+    flex-direction: row; /* Stacks children vertically */
+    gap: 5px;
+    /* background-color: #ffffff; */
+}
+
+.profile-detail-selection{
+    margin-left: 20px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    /* background-color: #88baff;  */
+}
+
+.profile-detail-text{
+    margin: 10px;
+    width: auto;
+    height: auto;
+    color:#335271;
+}
+
+.selected-profile-detail-text{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    width: auto;
+    height: 25px;
+    color:#335271;
+    font-weight: bold;
+    /* background-color: antiquewhite; */
+    box-shadow: 0px 4px 0px rgb(51, 82, 113); /* Shadow at the bottom */
+}
+
+.lab-results-container{
+    margin-left: 20px;
+    width: 100%;
+    height: 400px;
+    /* background-color: #88baff; */
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks children vertically */ 
+    gap: 20px;
+}
+
+.txrc{
+    height: 115px;
+    width:  95%;
+    background-color: #ffffff;
+    border: 2px solid rgba(136, 186, 255, 0.3); /* Semi-transparent border */
+
+    display: flex; /* Enables Flexbox */
+    justify-content: flex-start; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+}
+
+.tooth-xray-result{
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    margin-left: 25px; 
+    height: 80%;
+    width: 90%;
+    display: flex; /* Enables Flexbox */
+    flex-direction: row; /* Stacks children vertically */
+    justify-content: flex-start; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+
+    gap: 20px;
+    /* background-color: #640b0b; */
+}
+
+.file-icon{
+    height: 60px;
+    width: 50px;
+}
+
+.txrc-text{
+    font-size: 24px;
+    font-weight: bold;
+    color: #335271;  
+}
+
+.txrc-text2{
+    font-size: 12px;
+}
+
+.txrc-button{
+    margin-left: auto;
+    padding: 8px 50px;
+    height: auto;
+    background-color: #335271; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Removes the border */
+    border-radius: 50px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.txrc-button:hover {
+    background-color: #1d3b56; /* Darkens button color when hovered */
+}
+
+.ppxrc{
+    height: 115px;
+    width: 95%;
+    background-color: #ffffff;
+    border: 2px solid rgba(136, 186, 255, 0.5); /* Semi-transparent border */
+
+    display: flex; /* Enables Flexbox */
+    justify-content: flex-start; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    #left_panel {
+        width: 20%; /* Increase usability */
+    }
+
+    #left_panel label {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #left_panel {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #left_panel {
+        width: 50%;
+    }
+}

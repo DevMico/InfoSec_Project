@@ -1,0 +1,442 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Choose your desired background color */
+}
+
+.form-container {
+    margin-top: 40px; /* Adjust spacing below the header */
+    margin-left: 40px;
+    text-align: left;
+    font-size: 30px;
+    color: #CD6A30; /* Optional: Change text color */
+    text-transform: capitalize;
+    
+}
+
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    color: black;
+}
+
+/* Left Panel */
+.left_panel {
+    width: 17%; /* Default width */
+    background-color: #335271; /* Dark blue */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: width 0.3s ease; /* Smooth resizing */
+}
+
+/* Logo */
+.logo {
+    width: 150px    ;
+    margin-bottom: 30px;
+    
+}
+
+/* Navigation */
+.left_panel div {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.left_panel label {
+    width: 100%;
+    height: 50px; /*Spacing between the buttons*/
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background-color: #335271;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: background-color 0.2s ease;
+    color: #ffffff;
+}
+
+.left_panel label:hover {
+    background-color: #88baff; /* Hover effect */
+}
+
+.left_panel label img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.left_panel label:last-of-type {
+    margin-top: 60%;  /* signout */
+}
+
+/* Right Panel */
+.right_panel {
+    flex-grow: 1;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    height: 60px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    background-color: #ffffff; /* Ensure the bar has a visible background */
+    padding: 10px; /* Adjust padding for better appearance */
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    /*border-radius: 8px;  Optional: Add rounded corners */
+}
+
+/* Search Bar Container */
+.search-bar-container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Align boxes in a column */
+    gap: 0px; /* Spacing between boxes */
+    justify-content: flex-start; /* Start from the top */
+    align-items: left; /* Center align boxes horizontally */
+    padding: 20px; /* Add padding around the container */
+}
+
+/* Search Bar */
+/* Wrapper for Search Bar and Icon */
+.search-bar-wrapper {
+    position: relative; /* Position relative to enable absolute positioning of the icon */
+    display: flex; /* Keep items aligned */
+    align-items: center; /* Center vertically */
+    width: 35%; /* Match the search bar width */
+}
+
+/* Search Icon */
+.search-icon {
+    position: absolute; /* Position the icon inside the wrapper */
+    left: 10px; /* Position it 10px from the left */
+    width: 20px; /* Adjust size of the icon */
+    height: 20px;
+    pointer-events: none; /* Make the icon non-interactive */
+}
+
+/* Search Bar */
+.search-bar {
+    width: 100%; /* Take up full width of the wrapper */
+    height: 100%;
+    padding-left: 40px; /* Add padding to prevent overlap with the icon */
+    font-size: 16px; /* Font size for the search text */
+    border: 2px solid #E7F1FF; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Placeholder text styling */
+.search-bar::placeholder {
+    color: #88baff; /* Placeholder text color */
+    /*font-style: italic;  Optional: Makes the placeholder text italic */
+}
+
+/* Buttons next to the search bar */
+.search-button{
+    padding: 10px 20px; /* Add padding inside the buttons */
+    margin-left: 10px; /* Space between the search bar and the buttons */
+    font-size: 16px; /* Button font size */
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Rounded corners */
+    background-color: #335271; /* Dark blue button color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.filter-button {
+    display: inline-flex; /* Makes the button content flexible */
+    align-items: center; /* Vertically aligns content */
+    gap: 10px; /* Space between the image and the text */
+    padding: 10px 20px; /* Add padding inside the buttons */
+    margin-left: 10px; /* Space between the search bar and the buttons */
+    font-size: 16px; /* Button font size */
+    font-weight: bold;
+    border: none; /* Remove default border */
+
+    background-color: #ffffff; /* Dark blue button color */
+    color: #335271; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 1px solid #335271; /* Border thickness and color */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to pointer */
+}
+
+.filter-icon {
+    width: 16px; /* Adjust the size of the icon */
+    height: 16px; /* Maintain proportions */
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+/* Button Hover Effects */
+.search-button:hover, .clear-button:hover {
+    background-color: #88baff; /* Change color on hover */
+}
+
+/* Profile Container */
+.profile-container {
+    width: 97%; /* Width of the whole container */
+    height: 75%;
+    border: 2px solid #E7F1FF; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff; /* Background color */
+    overflow: hidden; /* Prevent content from overflowing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for effect */
+    margin: 20px auto; /* Center container */
+}
+
+/* Top Box */
+.profile-top-box {
+    display: flex; /* Flex layout for image and text */
+    align-items: center; /* Center items vertically */
+    /*padding: 15px; /* Padding inside the top box */
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #ffffff; /* Light gray background */
+    border-bottom: 1px solid #E7F1FF; /* Divider line between top and bottom */
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 135px;
+    height: 135px;
+    /*border-radius: 50%;  Circular profile picture */
+    margin-right: 30px; /* Space between image and text */
+}
+
+/* Profile Info */
+.profile-info {
+    text-align: left; /* Align text to the left */
+}
+
+.profile-name {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    color: #335271;
+}
+
+.profile-description {
+    font-size: 24px;
+    font-style: italic;
+    color: #666;
+    margin: 0;
+}
+
+.contact-details-container{
+    width: 100%; /* Width of the whole container */
+    height: 100%;
+    /*border: 2px solid #E7F1FF; /* Border color */
+    /*background-color:rgba(255, 0, 0, 0.2); /* Background color */
+    /* color: #335271;
+    font-style: italic; */
+    /* font-weight: bold; */
+    overflow: hidden; /* Prevent content from overflowing */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for effect */
+    /*margin: 20px auto; /* Center container */
+}
+
+.contact-details-text{
+    color: #335271;
+    font-style: italic; 
+    font-weight: bold;
+}
+
+.contact-details-container2{
+    width: 100%; /* Width of the whole container */
+    height: 50px;
+    /*border: 2px solid #E7F1FF; /* Border color */
+    /*background-color:rgba(255, 0, 0, 0.2); /* Background color */
+    /* color: #335271;
+    font-style: italic; */
+    display: flex;
+    /* font-weight: bold; */
+    overflow: hidden; /* Prevent content from overflowing */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for effect */
+    /*margin: 20px auto; /* Center container */
+}
+
+.email-box{
+    width: 30%;
+    margin-top: 10px;
+    display: flex; /* Flex layout for image and text */
+    align-items: center; /* Center items vertically */
+    /*padding: 15px; /* Padding inside the top box */
+    background-color: #ffffff; /* Light gray background */
+}
+
+.email-box-img{
+    padding-right: 10px;
+}
+
+
+.mobile-number-img{
+    padding-right: 10px;
+}
+
+.mobile-number-box{
+    width: 30%;
+    margin-top: 10px;
+    display: flex; /* Flex layout for image and text */
+    align-items: center; /* Center items vertically */
+    /*padding: 15px; /* Padding inside the top box */
+    background-color: #ffffff; /* Light gray background */
+}
+
+/* Bottom Box */
+.profile-bottom-box {
+    padding: 15px; /* Padding inside the bottom box */
+    background-color: #ffffff; /* White background */
+}
+
+.boxes-container {
+    height: 100%;
+    width: 100%;
+    display: flex; /* Flexbox to arrange items */
+    flex-direction: row; /* Align the boxes horizontally */
+    flex-wrap: wrap; /* Allow boxes to wrap if needed */
+    margin-top: 20px;
+    /*background-color: rgba(255, 0, 0, 0.2); /* Light red for debugging */
+}
+
+/* Working Hours Text */
+.container-text {
+    padding-left: 5px;
+    width: 100%; /* Ensure it takes full width */
+    text-align: left; /* Align text to the left */
+    font-size: 20px; /* Adjust font size */
+    font-style: italic;
+    font-weight: bold;
+    color: #335271;
+}
+
+.week-indicator {
+    position: absolute; /* Position it absolutely inside the container */
+    top: 525px; /* Move the text above the box */
+    left: 23%;
+    text-align: center; /* Center the text above the box */
+    font-size: 14px;
+    color: #88baff;
+    font-weight: bold;
+}
+
+
+.small-box {
+    margin-top: 3%;
+    /*flex: 1; /* Each box takes an equal amount of space */
+    /*max-width: calc(16% - 10px); /* Ensure all boxes fit in one row (16% width approx.) */
+    flex-direction: column;
+    gap: 10px;
+    height: 135px; /* Box height */
+    width: 160px;
+    background-color: #ffffff; /* Optional box background */
+    border: 1px solid #b6d5ff; /* Box border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*border-radius: 5px; /* Optional rounded corners */
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.small-blue-box {
+    margin-top: 3%;
+    /*flex: 1; /* Each box takes an equal amount of space */
+    flex-direction: column;
+    gap: 10px;
+    /*max-width: calc(16% - 10px); /* Ensure all boxes fit in one row (16% width approx.) */
+    height: 135px; /* Box height */
+    width: 160px;
+    background-color: #b6d5ff; /* Optional box background */
+    border: 1px solid #b6d5ff; /* Box border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*border-radius: 5px; /* Optional rounded corners */
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+.week-text{
+     margin: 5px ; /* Adds a margin of 5px above and below the text */
+}
+
+.schedule-text{
+    margin: 5px ;
+}
+
+.clock-image {
+    width: 60px;      /* Ensure it takes up the full width of the container */
+    height: 60px;     /* Ensure it takes up the full height of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide anything that overflows the container */
+}
+
+/* Additional adjustments for layout if necessary */
+
+.fullname {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #CD6A30;
+}
+
+.status {
+    font-size: 10px;
+    margin: 0;
+    color: #666;
+    text-align: right;
+}
+
+.profile_icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ddd;
+    object-fit: cover;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    #left_panel {
+        width: 20%; /* Increase usability */
+    }
+
+    #left_panel label {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #left_panel {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #left_panel {
+        width: 50%;
+    }
+}
